@@ -8,6 +8,7 @@ const {
   View,
   TouchableWithoutFeedback,
   Component,
+  Platform,
 } = React;
 
 /**
@@ -254,6 +255,7 @@ SideMenu.defaultProps = {
     );
   },
   isOpen: false,
+  disableGestures: (Platform.OS == 'android')
 };
 
 module.exports = SideMenu;
